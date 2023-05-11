@@ -1,0 +1,60 @@
+name: _offline
+timestamp: 1676022658
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: _offline
+  timestamp: 1676022657
+positions:
+  breadcrumbs: Hero
+sections:
+  top: Top
+  navigation: Navigation
+  slideshow: Slideshow
+  hero: Hero
+  above: Above
+  feature: Feature
+  showcase: Showcase
+  utility: Utility
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  below: Below
+  copyright: Copyright
+  header: Header
+  sidebar: Sidebar
+  aside: Aside
+  mainbar: Main
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  messages:
+    system-messages-8907: 'System Messages'
+  content:
+    system-content-2965: 'Page Content'
+  jlnavbar:
+    jlnavbar-7791: 'JL Navbar'
+  position:
+    position-position-4412: Hero
+  jlfooterinfo:
+    jlfooterinfo-3656: 'JL Footer Info'
+  jldivider:
+    jldivider-2567: 'JL Divider'
+  copyright:
+    copyright-5591: Copyright
+  branding:
+    branding-2037: Branding
+inherit:
+  default:
+    top: top
+    navigation: navigation
+    hero: hero
+    footer: footer
+    copyright: copyright
+    offcanvas: offcanvas
+    jlnavbar-7791: jlnavbar-6300
+    position-position-4412: position-position-4919
+    jlfooterinfo-3656: jlfooterinfo-5232
+    jldivider-2567: jldivider-3267
+    copyright-5591: copyright-7703
+    branding-2037: branding-3996

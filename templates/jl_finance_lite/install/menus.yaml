@@ -1,0 +1,9 @@
+finance-theme:
+  title: 'Finance Theme'
+  description: 'Sample menu for the theme.'
+
+  items:
+    finance:
+      title: 'Home'
+      outline: home
+      home: 1

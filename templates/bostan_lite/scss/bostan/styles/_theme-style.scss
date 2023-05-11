@@ -1,0 +1,216 @@
+#g-navigation {
+  .jl-navbar-container:not(.jl-navbar-transparent) {
+    background: $navigation-background;
+  }
+  .g-main-nav .g-dropdown {
+    background: $menustyle-sublevel-background;
+    .jl-nav {
+      padding: 25px;
+    }
+    .moduletable,
+    .widget {
+      color: $menustyle-sublevel-text-color;
+      a {
+        color: $menustyle-sublevel-text-color;
+        &:hover,
+        &:focus {
+          color: $menustyle-sublevel-text-color-hover;
+        }
+        &:active {
+          color: $menustyle-sublevel-text-color-active;
+        }
+      }
+    }
+  }
+
+  .g-main-nav .g-toplevel > li > .g-menu-item-container {
+    position: relative;
+    z-index: 1;
+  }
+  .g-main-nav .g-toplevel > li > .g-menu-item-container:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    transition-property: background-color, border-color, box-shadow, height, left, right, opacity;
+    left: 15px;
+    left: 50%;
+    right: 50%;
+  }
+
+  .g-main-nav .g-toplevel > li:hover > .g-menu-item-container:before {
+    left: 15px;
+    right: 15px;
+    background-color: $accent-color-2;
+  }
+
+  .g-main-nav .g-toplevel > li.active > .g-menu-item-container:before {
+    background-color: $accent-color-2;
+    left: 15px;
+    right: 15px;
+  }
+
+  // Extended style
+  .jl-navbar-item,
+  .jl-navbar-nav > li > a,
+  .jl-navbar-toggle {
+    min-height: $menustyle-item-height;
+  }
+  .jl-navbar-dropdown {
+    background: $menustyle-sublevel-background;
+  }
+  .jl-navbar-nav > li > a,
+  .jl-search-toggle,
+  .jl-navbar-toggle,
+  .jl-logo {
+    color: $menustyle-text-color;
+  }
+  .jl-search-toggle,
+  .jl-navbar-toggle {
+    &:hover,
+    &:focus {
+      color: $menustyle-text-color-active;
+    }
+  }
+  .jl-navbar-nav > li:hover > a,
+  .jl-navbar-nav > li > a:focus,
+  .jl-navbar-nav > li > a[aria-expanded="true"] {
+    background-color: $menustyle-background-active;
+    color: $menustyle-text-color-active;
+  }
+
+  .jl-navbar-nav > li > a:active,
+  .jl-navbar-nav > li.jl-active > a {
+    background-color: $menustyle-background-active;
+    color: $menustyle-text-color-active;
+  }
+
+  //Dropdown
+  .jl-navbar-dropdown-nav > li > a {
+    color: $menustyle-sublevel-text-color;
+  }
+
+  .jl-navbar-dropdown-nav > li > a:focus,
+  .jl-navbar-dropdown-nav > li > a:hover {
+    color: $menustyle-sublevel-text-color-hover;
+  }
+
+  .jl-navbar-dropdown-nav > li.jl-active > a {
+    color: $menustyle-sublevel-text-color-active;
+  }
+
+  .jl-navbar-dropdown-nav .jl-nav-header {
+    color: $menustyle-sublevel-text-color-active;
+  }
+  .jl-navbar-dropdown-nav .jl-nav-sub a {
+    color: $menustyle-sublevel-text-color;
+  }
+  .jl-navbar-dropdown-nav .jl-nav-sub a:hover {
+    color: $menustyle-sublevel-text-color-hover;
+  }
+  .jl-navbar-dropdown-nav .jl-nav-sub li.jl-active > a {
+    color: $menustyle-sublevel-text-color-active;
+  }
+  .mobile-toggle {
+    color: $offcanvas-toggle-color;
+    &:focus,
+    &:hover {
+      color: $offcanvas-toggle-color-active;
+    }
+  }
+}
+
+//Subnav
+.tm-nav-mobile {
+  background: $offcanvas-background;
+  color: $offcanvas-text-color;
+  .jl-nav-default > li > a,
+  .jl-nav-default .jl-nav-header,
+  .jl-nav-default .jl-nav-sub a,
+  .jl-nav-primary > li > a,
+  .jl-nav-primary .jl-nav-header,
+  .jl-nav-primary .jl-nav-sub a {
+    color: $offcanvas-text-color;
+  }
+  .jl-nav-default > li > a:hover,
+  .jl-nav-default .jl-nav-sub a:hover,
+  .jl-nav-primary > li > a:hover,
+  .jl-nav-primary .jl-nav-sub a:hover {
+    color: $offcanvas-text-color-active;
+  }
+  .jl-nav-default > li.jl-active > a,
+  .jl-nav-default .jl-nav-sub li.jl-active > a,
+  .jl-nav-primary > li.jl-active > a,
+  .jl-nav-primary .jl-nav-sub li.jl-active > a {
+    color: $offcanvas-text-color-active;
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e7e7e7;
+  span,
+  i {
+    color: $accent-color-2;
+  }
+}
+
+.jl-search-default .jl-search-input {
+  border: none;
+}
+
+.jl-accordion > :nth-child(n + 2) {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #ededed;
+}
+
+.jl-card-primary > .tm-timeline-arrow {
+  background-color: $accent-color-1;
+}
+
+.jl-article {
+  .jl-breadcrumb {
+    margin-left: 0;
+  }
+}
+
+.custom-toolbar,
+.custom-copyright {
+  .g-content {
+    padding: 10px $content-padding;
+    margin: 0 $content-margin;
+  }
+}
+
+// Misc
+.jl-subnav-pill > * > :first-child {
+  padding: 5px 20px;
+}
+
+.jl-alert-primary {
+  background-color: $accent-color-1;
+}
+
+.jl-text-secondary {
+  color: $accent-color-2 !important;
+}
+
+.jl-text-secondary {
+  color: $accent-color-2 !important;
+}
+
+.card-muted {
+  .jl-card-default {
+    background-color: #f5f5f5;
+    box-shadow: none;
+  }
+}
+
+.jl-button-secondary,
+.jl-card-secondary {
+  background-color: $accent-color-2;
+}

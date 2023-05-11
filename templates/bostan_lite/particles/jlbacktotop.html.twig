@@ -1,0 +1,49 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+<style>
+.back-to-top{position:fixed;bottom:40px;height:46px;width:46px;z-index:9999;background-color:#2b3138}.back-to-top span{color:#fff}.back-to-top:hover,.back-to-top:active{background-color:#20242a}.back-to-top:hover span,.back-to-top:active span{color:rgba(255,255,255,0.8)}.back-to-top.jl-icon-button{transition:none}.jl-totop{color:#fff}.jl-totop:hover,.jl-totop:focus,.jl-totop:active{color:rgba(255,255,255,0.8)}@-webkit-keyframes fadeInRight{from{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInRight{from{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}to{opacity:1;-webkit-transform:none;transform:none}}@-webkit-keyframes fadeOutRight{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}@keyframes fadeOutRight{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}.back-to-top{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:fadeInRight;animation-name:fadeInRight}.backHide{-webkit-animation-name:fadeOutRight;animation-name:fadeOutRight}
+{% if particle.background %}
+.back-to-top { background-color: {{ particle.background }}; }
+{% endif %}
+{% if particle.color %}
+.back-to-top{{ particle.icon ? ' span' : '.jl-totop' }}{ color: {{ particle.color }}; }
+{% endif %}
+{% if particle.backgroundhover %}
+.back-to-top:hover { background-color: {{ particle.backgroundhover }}; }
+{% endif %}
+{% if particle.icon_color %}
+.back-to-top:hover{{ particle.icon ? ' span' : '.jl-totop' }} { color: {{ particle.icon_color }}; }
+{% endif %}
+.back-to-top { {{ gantry.page.direction == 'rtl' ? 'left' : 'right' }}: 20px;}
+</style>
+{% endblock %}
+
+{% pageblock bottom %}
+<a href="#"{% if particle.icon %} role="button" aria-label="{{ particle.title_label|raw|default('Back to top')}}" {% endif %}class="back-to-top jl-icon-button"{% if particle.sec_id %} href="{{ particle.sec_id|e }}"{% endif %} aria-label="{{ particle.title_label|raw|default('Back to top')}}" jl-scroll{% if not particle.icon %} jl-totop{% endif %}>
+    {% if particle.icon %}<span class="{{ particle.icon|e }}" aria-hidden="true"></span>{% endif %}
+</a>
+{% endpageblock %}
+
+{% block javascript %}
+{% do gantry.load('jquery') %}
+<script>
+jQuery(function($) {
+  if ($('.back-to-top').length) {
+    var scrollTrigger = 0, // px
+    backToTop = function() {
+      var scrollTop = $(window).scrollTop();
+      if (scrollTop > scrollTrigger) {
+        $('.back-to-top').removeClass('backHide');
+      } else {
+        $('.back-to-top').addClass('backHide');
+      }
+    };
+    backToTop();
+    $(window).on('scroll', function() {
+      backToTop();
+    });
+  }
+});
+</script>
+{% endblock %}

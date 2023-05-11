@@ -1,0 +1,4 @@
+preset: preset1
+font:
+  family-title: family=Dangrek
+  family-default: 'family=Kantumruy:300'

@@ -1,0 +1,51 @@
+name: 13
+timestamp: 1676022658
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: home_-_particles
+  timestamp: 1676022657
+positions: {  }
+sections:
+  top: Top
+  navigation: Navigation
+  slideshow: Slideshow
+  hero: Hero
+  above: Above
+  feature: Feature
+  showcase: Showcase
+  utility: Utility
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  below: Below
+  copyright: Copyright
+  header: Header
+  sidebar: Sidebar
+  aside: Aside
+  mainbar: Main
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  jlnavbar:
+    jlnavbar-1572: 'JL Navbar'
+  jlfooterinfo:
+    jlfooterinfo-9080: 'JL Footer Info'
+  jldivider:
+    jldivider-1708: 'JL Divider'
+  copyright:
+    copyright-8321: Copyright
+  branding:
+    branding-5160: Branding
+inherit:
+  default:
+    top: top
+    navigation: navigation
+    footer: footer
+    copyright: copyright
+    offcanvas: offcanvas
+    jlnavbar-1572: jlnavbar-6300
+    jlfooterinfo-9080: jlfooterinfo-5232
+    jldivider-1708: jldivider-3267
+    copyright-8321: copyright-7703
+    branding-5160: branding-3996

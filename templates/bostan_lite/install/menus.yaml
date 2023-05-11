@@ -1,0 +1,9 @@
+bostan-theme:
+  title: 'Bostan Theme'
+  description: 'Sample menu for the theme.'
+
+  items:
+    bostan:
+      title: 'Home'
+      outline: home
+      home: 1
